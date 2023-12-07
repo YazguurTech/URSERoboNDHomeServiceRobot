@@ -1,0 +1,7 @@
+pickup_location:
+  px: 4.75
+  py: -6.25
+
+dropoff_location:
+  px: -3.5
+  py: 5.8

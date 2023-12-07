@@ -132,6 +132,10 @@ Create a pick_objects package:
 cd ~/catkin_ws/src
 catkin_create_pkg add_markers visualization_msgs roscpp 
 
+Create a home_service package:
+cd ~/catkin_ws/src
+catkin_create_pkg home_service 
+
 
 get a location and goal:
 rostopic echo /initialpose

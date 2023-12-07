@@ -14,14 +14,16 @@ sleep 15
 
 xterm -e "cd $(pwd)/../..;
 source devel/setup.bash;
-roslaunch add_markers add_markers_testonly.launch " &
+roslaunch home_service home_service.launch " &
 sleep 10
 
 xterm -e "cd $(pwd)/../..;
 source devel/setup.bash;
-rosrun add_markers add_markers_testonly " &
+rosparam load $(pwd)/../../src/configs/location_config.yaml
+rosrun add_markers add_markers " &
 sleep 10
 
 xterm -e "cd $(pwd)/../..;
 source devel/setup.bash;
-rosrun pick_objects pick_objects_testonly "
+rosparam load $(pwd)/../../src/configs/location_config.yaml
+rosrun pick_objects pick_objects "
