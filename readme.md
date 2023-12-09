@@ -27,20 +27,16 @@ This readme contains instructions about how to run the project.
     rosdep -i install turtlebot3_teleop
     rosdep -i install turtlebot3_gazebo
     ```
-
-    `If you haven't set up environment, please refer to the "Set up environment" section below.`
+    If you haven't set up environment, please refer to the "Setting up the environment" section below.
 
 ### Steps to run:
 There are the following 5 script files in the src/scripts directory:
-    - test_slam.sh - It will deploy a waffle turtlebot3 inside a gazebo environment. You can control it with keyboard commands. 
-    It will interface it with a SLAM package, and you can visualize the map in RViz.
-    - test_navigation.sh - It will deploy a waffle turtlebot3 inside a gazebo environment. 
-    Also, it will launch turtlebot3 navigation where you can manually navigate the robot to reach a desired position using the 2D Nav Goal functionality on the RViz.
-    - pick_objects.sh - It will run the pick_objects node which will autonomously send successive goals for the robot to reach.
-    - add_markers.sh - It will run the add_markers node which will publish markers in RViz to imitate a virtual object appearing in its pickup zone,
-    and then in its drop off zone.
-    - home_service.sh - It will run the add_markers and pick_objects node which will simulate a home service robot capable of 
-    navigating to pick up and deliver virtual objects.
+ - test_slam.sh - It will deploy a waffle turtlebot3 inside a gazebo environment. You can control it with keyboard commands. 
+ It will interface it with a SLAM package, and you can visualize the map in RViz.
+ - test_navigation.sh - It will deploy a waffle turtlebot3 inside a gazebo environment. Also, it will launch turtlebot3 navigation where you can manually navigate the robot to reach a desired position using the 2D Nav Goal functionality on the RViz.
+ - pick_objects.sh - It will run the pick_objects node which will autonomously send successive goals for the robot to reach.
+ - add_markers.sh - It will run the add_markers node which will publish markers in RViz to imitate a virtual object appearing in its pickup zone, and then in its drop off zone.
+ - home_service.sh - It will run the add_markers and pick_objects node which will simulate a home service robot capable of navigating to pick up and deliver virtual objects.
 
 1. Download and extract the Home Service Robot zip file.
 2. Go the URSERoboNDHomeServiceRobot directory.
