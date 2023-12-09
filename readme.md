@@ -31,26 +31,26 @@ This readme contains instructions about how to run the project.
 
 ### Steps to run:
 There are the following 5 script files in the src/scripts directory:
- - test_slam.sh - It will deploy a waffle turtlebot3 inside a gazebo environment. You can control it with keyboard commands. 
+ - **test_slam.sh** - It will deploy a waffle turtlebot3 inside a gazebo environment. You can control it with keyboard commands. 
  It will interface it with a SLAM package, and you can visualize the map in RViz.
- - test_navigation.sh - It will deploy a waffle turtlebot3 inside a gazebo environment. Also, it will launch turtlebot3 navigation where you can manually navigate the robot to reach a desired position using the 2D Nav Goal functionality on the RViz.
- - pick_objects.sh - It will run the pick_objects node which will autonomously send successive goals for the robot to reach.
- - add_markers.sh - It will run the add_markers node which will publish markers in RViz to imitate a virtual object appearing in its pickup zone, and then in its drop off zone.
- - home_service.sh - It will run the add_markers and pick_objects node which will simulate a home service robot capable of navigating to pick up and deliver virtual objects.
+ - **test_navigation.sh** - It will deploy a waffle turtlebot3 inside a gazebo environment. Also, it will launch turtlebot3 navigation where you can manually navigate the robot to reach a desired position using the 2D Nav Goal functionality on the RViz.
+ - **pick_objects.sh** - It will run the pick_objects node which will autonomously send successive goals for the robot to reach.
+ - **add_markers.sh** - It will run the add_markers node which will publish markers in RViz to imitate a virtual object appearing in its pickup zone, and then in its drop off zone.
+ - **home_service.sh** - It will run the add_markers and pick_objects node which will simulate a home service robot capable of navigating to pick up and deliver virtual objects.
 
-1. Download and extract the Home Service Robot zip file.
-2. Go the URSERoboNDHomeServiceRobot directory.
+1. Download and extract the HomeServiceRobot.zip file.
+2. Go the HomeServiceRobot directory.
     ```
-    $ cd URSERoboNDHomeServiceRobot
+    $ cd HomeServiceRobot
     ```
 3. Build the project
     ```
     catkin_make
     source devel/setup.bash
     ```
-4. Go a /src/scripts directory on the URSERoboNDHomeServiceRobot folder.
+4. Go a /src/scripts directory on the HomeServiceRobot folder.
     ```
-    $ cd URSERoboNDHomeServiceRobot/src/scripts
+    $ cd HomeServiceRobot/src/scripts
     ```
 5. Execute the corresponding script file.
 
