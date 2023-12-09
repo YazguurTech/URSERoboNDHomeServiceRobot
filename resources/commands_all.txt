@@ -1,0 +1,999 @@
+    1  sudo add-apt-repository ppa:yannubuntu/boot-repair
+    2  sudo apt-get update
+    3  sudo apt-get install -y boot-repair
+    4  boot repair
+    5  boot-repair
+    6  cd /var/log/boot-repair/20231116_233910/
+    7  gedit Boot-Info_20231116_2339.txt 
+    8  sudo add-apt-repository ppa:nilarmogard/webupd8
+    9  sudo add-apt-repository ppa:nilarimogard/webupd8
+   10  sudo apt-get update
+   11  sudo apt-get install woeusb
+   12  sudo apt install git p7zip-full python3-pip python3-wxgtk4.0 grub2-common grub-pc-bin
+   13  sudo pip3 install WoeUSB-ng
+   14  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+   15  sudo apt install curl 
+   16  curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+   17  sudo apt update
+   18  sudo apt install ros-noetic-desktop-full
+   19  echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+   20  source ~/.bashrc
+   21  sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+   22  sudo apt install python3-rosdep
+   23  sudo rosdep init
+   24  rosdep update
+   25  curl -sSL http://get.gazebosim.org | sh
+   26  sudo apt-get install ros-noetic-navigation sudo apt-get install ros-noetic-map-server sudo apt-get install ros-noetic-move-base sudo apt-get install ros-noetic-amcl
+   27  sudo apt-get install ros-noetic-navigation 
+   28  sudo apt-get install ros-noetic-map-server 
+   29  sudo apt-get install ros-noetic-move-base 
+   30  sudo apt-get install ros-noetic-amcl
+   31  sudo apt-get install libignition-math4-dev 
+   32  sudo apt-get install protobuf-compiler
+   33  sudo apt-get install ros-noetic-rtabmap-ros
+   34  gazebo
+   35  sudo apt-get install wget gpg
+   36  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+   37  sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+   38  sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+   39  rm -f packages.microsoft.gpg
+   40  sudo apt install apt-transport-https
+   41  sudo apt update
+   42  sudo apt install code
+   43  ls
+   44  cd Documents/
+   45  history > history_for_print.txt
+   46  git
+   47  cd Documents/
+   48  ws
+   49  git clone https://github.com/YazguurTech/URSERoboNDMapMyWorld.git
+   50  cd URSERoboNDMapMyWorld/
+   51  ls
+   52  git status
+   53  git add docs/
+   54  git commit -m "commands to set up env"
+   55  git config --global user.email "yazguurtech@gmail.com"
+   56  git config --global user.name "YazguurTech"
+   57  git commit -m "commands to set up env"
+   58  git status
+   59  git push
+   60  git status
+   61  git push
+   62  git config --global credential.helper store
+   63  git push
+   64  g++ main.cpp 
+   65  ls
+   66  ./a.out 
+   67  g++ main.cpp 
+   68  ./a.out 
+   69  .code
+   70  ./code
+   71  .\code
+   72  .code
+   73  code
+   74  g++ main.cpp 
+   75  ./a.out 
+   76  g++ main.cpp 
+   77  ./a.out 
+   78  g++ main.cpp 
+   79  ./a.out 
+   80  g++ main.cpp 
+   81  ./a.out 
+   82  g++ main.cpp 
+   83  ./a.out 
+   84  g++ main.cpp 
+   85  ./a.out 
+   86  g++ main.cpp 
+   87  ./a.out 
+   88  g++ main.cpp 
+   89  ./a.out 
+   90  g++ main.cpp 
+   91  ./a.out 
+   92  g++ main.cpp 
+   93  ./a.out 
+   94  g++ main.cpp 
+   95  ./a.out 
+   96  g++ main.cpp 
+   97  ./a.out 
+   98  g++ main.cpp 
+   99  ./a.out 
+  100  g++ main.cpp 
+  101  ./a.out 
+  102  g++ main.cpp 
+  103  ./a.out 
+  104  g++ main.cpp 
+  105  ./a.out 
+  106  g++ main.cpp 
+  107  ./a.out 
+  108  g++ main.cpp 
+  109  ./a.out 
+  110  g++ main.cpp 
+  111  ./a.out 
+  112  g++ main.cpp 
+  113  ./a.out 
+  114  g++ main.cpp 
+  115  ./a.out 
+  116  g++ main.cpp 
+  117  ./a.out 
+  118  g++ main.cpp 
+  119  ./a.out 
+  120  g++ main.cpp 
+  121  ./a.out 
+  122  g++ main.cpp 
+  123  ./a.out 
+  124  g++ main.cpp 
+  125  ./a.out 
+  126  g++ main.cpp 
+  127  ./a.out 
+  128  code .
+  129  wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
+  130  ad
+  131  echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+  132  sudo apt install anydesk
+  133  sudo apt update
+  134  wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
+  135  echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+  136  sudo apt install anydesk
+  137  g++ main.cpp 
+  138  ./a.out 
+  139  g++ main.cpp 
+  140  ./a.out 
+  141  g++ main.cpp 
+  142  ./a.out 
+  143  g++ main.cpp 
+  144  ./a.out 
+  145  g++ main.cpp 
+  146  ./a.out 
+  147  g++ solution.cpp 
+  148  ./a.out 
+  149  g++ main.cpp 
+  150  ./a.out 
+  151  g++ main.cpp 
+  152  ./a.out 
+  153  g++ main.cpp 
+  154  ./a.out 
+  155  g++ main_realworld.cpp 
+  156  ./a.out 
+  157  g++ main.cpp 
+  158  g++ main.cpp -o app -std=c++11 -I/usr/include/python2.7 -lpython2.7
+  159  g++ main.cpp -o app -std=c++11 -I/usr/include/python3.8 -lpython3.8
+  160  g++ main.cpp -std=c++11 -DWITHOUT_NUMPY -I/usr/local/include/python2.7 -lpython2.7
+  161  g++ main.cpp -std=c++11 -DWITHOUT_NUMPY -I/usr/bin/python2.7 -lpython2.7
+  162  g++ main.cpp -o app -std=c++11 -I/usr/include/python3.8 -lpython3.8
+  163  ./app 
+  164  g++ main.cpp -o app -std=c++11 -I/usr/include/python3.8 -lpython3.8
+  165  ./app 
+  166  g++ main.cpp -o app -std=c++11 -I/usr/include/python3.8 -lpython3.8
+  167  ./app 
+  168  code .
+  169  pip3 install matplotlib 
+  170  sudo apt-get  install python3 python3-dev 
+  171  which python2.7
+  172  which python
+  173  which python3.8
+  174  cd /usr/bin/
+  175  ls
+  176  ls -l
+  177  git status
+  178  git add docs/SetupDevelopmentEnvironment.txt 
+  179  git commit -m "update"
+  180  git push
+  181  code .
+  182  g++ main.cpp -o app -std=c++11 -I/usr/include/python3.8 -lpython3.8
+  183  ./app 
+  184  git clone https://github.com/YazguurTech/URSERoboNDHomeServiceRobot.git
+  185  cd URSERoboNDHomeServiceRobot/
+  186  code .
+  187  mkdir src
+  188  cd src/
+  189  catkin_init_workspace
+  190  cd ..
+  191  catkin_make
+  192  sudo apt-get update
+  193  cd src/
+  194  ls
+  195  git clone https://github.com/ros-perception/slam_gmapping
+  196  git clone https://github.com/turtlebot/turtlebot
+  197  git clone https://github.com/turtlebot/turtlebot_interactions
+  198  git clone https://github.com/turtlebot/turtlebot_simulator
+  199  ls 
+  200  cd ..
+  201  source devel/setup.bash 
+  202  catkin_make
+  203  source devel/setup.bash 
+  204  rosdep -i install gmapping
+  205  rosdep -i install turtle_teleop
+  206  rosdep -i install turtlebot_teleop
+  207  rosdep -i install turtlebot_rviz_launchers
+  208  rosdep -i install turtlebot_gazebo
+  209  rosdep install turtlebot_navigation
+  210  rosdep update
+  211  rosdep install turtlebot_navigation
+  212  sudo apt-get install ros-noetic-turtlebot-navigation
+  213  cd ..
+  214  ls
+  215  cd PathPlanningLab/
+  216  ls
+  217  git init 
+  218  git status
+  219  git add 1_BFS_expansion_list.cpp
+  220  git add 2_BFS_expansion_vector.cpp
+  221  git add 3_BFS_shortest_path.cpp 
+  222  git add 4_A_star_shortest_path.cpp 
+  223  git add 5_A_star_real_world_example.cpp 
+  224  git add Images/
+  225  git add Result.png 
+  226  git add a.out 
+  227  git add main.cpp 
+  228  git add main_realworld.cpp 
+  229  git add main_realworld_viz.cpp 
+  230  git add map.txt 
+  231  git add map_viz.txt 
+  232  git add readme.txt 
+  233  git add solution.cpp 
+  234  git add src/
+  235  git commit -m "add lab codes"
+  236  git push
+  237  git branch -M main
+  238  git remote add origin https://github.com/YazguurTech/RoboNDPathPlanningLab.git
+  239  git push -u origin main
+  240  git status
+  241  git add .gitignore 
+  242  git commit -m "add gitignore"
+  243  git push
+  244  git status
+  245  git add .gitignore 
+  246  git commit -m "update"
+  247  git push
+  248  git status
+  249  mkdir src
+  250  cd src/
+  251  git status
+  252  ls
+  253  catkin_make
+  254  source devel/setup.bash 
+  255  rosdep -i install gmapping
+  256  rosdep -i install turtlebot_teleop
+  257  rosdep -i install turtlebot_rviz_launchers
+  258  rosdep -i install turtlebot_gazebo
+  259  catkin_make
+  260  source devel/setup.bash 
+  261  touch launch.sh
+  262  touch test_slam.sh
+  263  ls
+  264  ./launch.sh
+  265  sudo chmod +x launch.sh 
+  266  sudo chmod +x test_slam.sh 
+  267  ./launch.sh
+  268  sudo apt-get install xterm
+  269  ./launch.sh
+  270  ./test_slam.sh 
+  271  source devel/setup.bash 
+  272  ./test_slam.sh 
+  273  roslaunch turtlebot_gazebo turtlebot_world.launch
+  274  ls
+  275  cd src/
+  276  ls
+  277  catkin_init_workspace 
+  278  sudo apt-get update
+  279  ls
+  280  git clone https://github.com/ros-perception/slam_gmapping
+  281  git clone https://github.com/ROBOTIS-GIT/turtlebot3
+  282  ls
+  283  git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
+  284  ls
+  285  cd turtlebot3/
+  286  ls
+  287  git status
+  288  ls
+  289  git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+  290  cd ..
+  291  ls
+  292  cd /Documents/URSERoboNDHomeServiceRobot/src/turtlebot3
+  293  cd /
+  294  cd Documents/URSERoboNDHomeServiceRobot/src/turtlebot3
+  295  ls
+  296  pwd
+  297  git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
+  298  git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+  299  ls
+  300  cd ..
+  301  ls
+  302  catkin_make
+  303  rosdep -i install gmapping
+  304  rosdep -i install turtlebot3_teleop
+  305  rosdep -i install turtlebot3_gazebo
+  306  cd src/
+  307  ls
+  308  cd scripts/
+  309  touch test_slam.sh
+  310  chmod +x test_slam.sh 
+  311  sudo apt-get install xterm
+  312  cd ..
+  313  catkin_make
+  314  source devel/setup.bash
+  315  roslaunch turtlebot3_gazebo turtlebot3_world.launch
+  316  export TURTLEBOT3_MODEL=waffle
+  317  roslaunch turtlebot3_gazebo turtlebot3_world.launch
+  318  roslaunch turtlebot3_gazebo turtlebot3_house.launch
+  319  roslaunch turtlebot3_gazebo turtlebot3_world.launch
+  320  roslaunch turtlebot3_gazebo turtlebot3_house.launch
+  321  roslaunch turtlebot3_slam gmapping.launch 
+  322  roslaunch turtlebot3_slam turtlebot3_gmapping.launch
+  323  roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+  324  roslaunch turtlebot3_navigation turtlebot3_navigation.launch 
+  325  ls
+  326  src
+  327  ls
+  328  cd src/
+  329  ls
+  330  cd scripts/
+  331  ls
+  332  ./test_slam.sh 
+  333  cd ..
+  334  source devel/setup.bash 
+  335  export TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_gazebo turtlebot3_world.launch 
+  336  source devel/setup.bash 
+  337  export TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_slam turtlebot3_gmapping.launch "
+  338  export TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_slam turtlebot3_gmapping.launch
+  339  roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+  340  export TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_slam turtlebot3_gmapping.launch
+  341  source devel/setup.bash 
+  342  export TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_navigation turtlebot3_navigation.launch 
+  343  export TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_navigation amcl.launch
+  344  export TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_navigation turtlebot3_navigation.launch 
+  345  git status
+  346  source devel/setup.bash 
+  347  ls
+  348  cd src/
+  349  ls
+  350  cd scripts/
+  351  ls
+  352  ./test_slam.sh 
+  353  ls
+  354  git clone https://github.com/YazguurTech/URSERoboNDWhereAmI.git
+  355  ls
+  356  cd URSERoboNDWhereAmI/
+  357  ls
+  358  catkin_make
+  359  ls
+  360  cd src/
+  361  ls
+  362  cd my_robot/
+  363  ls
+  364  cd maps/
+  365  ls
+  366  ls
+  367  cd Documents/
+  368  ls
+  369  cd URSERoboNDHomeServiceRobot
+  370  ls
+  371  source devel/setup.bash 
+  372  export TURTLEBOT3_MODEL=waffle
+  373  roslaunch turtle3_gazebo turtlebot3_world.launch
+  374  ls
+  375  catkin_make
+  376  source devel/setup.bash 
+  377  roslaunch turtlebot3_gazebo turtlebot3_world.launch 
+  378  roslaunch turtlebot3_gazebo turtlebot3_world.launch world_name:$(pwd)/../../src/map/training_area.world 
+  379  roslaunch turtlebot3_gazebo turtlebot3_world.launch world_name:$(pwd)/src/map/training_area.world 
+  380  pwd
+  381  roslaunch turtlebot3_gazebo turtlebot3_world.launch world_name:$(pwd)/src/map/training_area.world 
+  382  roslaunch turtlebot3_gazebo turtlebot3_world.launch world_name:=$(pwd)/src/map/training_area.world 
+  383  roslaunch turtlebot3_gazebo turtlebot3_world.launch world_name:=$(pwd)/src/map/training_area.world1 
+  384  roslaunch turtlebot3_gazebo turtlebot3_world.launch world_file:=$(pwd)/src/map/training_area.world 
+  385  roslaunch turtlebot3_gazebo turtlebot3_world.launch
+  386  cd src/scripts/
+  387  ls
+  388  ./test_slam.sh 
+  389  source devel/setup.bash 
+  390  export TURTLEBOT3_MODEL=waffle;
+  391  roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+  392  ls
+  393  cd src/
+  394  ls
+  395  git clone git clone https://github.com/udacity/pgm_map_creator.git
+  396  git clone https://github.com/udacity/pgm_map_creator.git
+  397  cd ..
+  398  catkin_make
+  399  sudo apt-get install libignition-math2-dev protobuf-compiler
+  400  sudo apt-get install libignition-math4-dev protobuf-compiler
+  401  catkin_make
+  402  ls
+  403  git clone https://github.com/YazguurTech/URSERoboNDWhereAmI_kinetic_pgm_map_creator.git
+  404  ls
+  405  cd URSERoboNDHomeServiceRobot
+  406  ls
+  407  cd src/
+  408  ls
+  409  cd scripts/
+  410  ls
+  411  ./test_slam.sh 
+  412  cd ..
+  413  c d..
+  414  cd ..
+  415  source devel/setup.bash 
+  416  export TURTLEBOT3_MODEL=waffle;
+  417  cd src/scripts/
+  418  ./test_slam.sh 
+  419  echo $HOME
+  420  ./test_slam.sh 
+  421  roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$(pwd)/../../src/map/training_area.yaml
+  422  ./test_slam.sh 
+  423  roslaunch turtlebot3_navigation turtlebot3_navigation.launch initial_pose_a:=-1.57 map_file:=$(pwd)/../../src/map/training_area.yaml 
+  424  roslaunch turtlebot3_navigation turtlebot3_navigation.launch initial_pose_a:=1.57 map_file:=$(pwd)/../../src/map/training_area.yaml 
+  425  ./test_slam.sh 
+  426  ls
+  427  cd Documents/
+  428  ls
+  429  cd URSERoboNDHomeServiceRobot
+  430  ls
+  431  code .
+  432  ls
+  433  cd Documents/
+  434  ls
+  435  cd src/
+  436  ls
+  437  cd scripts/
+  438  ls
+  439  ./test_slam.sh 
+  440  ..
+  441  cd ..
+  442  source devel/setup.bash 
+  443  ../src/scripts/test_slam.sh 
+  444  ./src/scripts/test_slam.sh 
+  445  find turtlebot3_navigation
+  446  $(find turtlebot3_navigation)
+  447  pwd
+  448  ./src/scripts/test_slam.sh 
+  449  xport TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$(pwd)/src/map-training_area.yaml 
+  450  export TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$(pwd)/src/map-training_area.yaml 
+  451  ./src/scripts/test_slam.sh 
+  452  cd ..
+  453  cd /home/user/
+  454  ls
+  455  source devel/setup.bash 
+  456  ./src/scripts/test_slam.sh 
+  457  source devel/setup.bash 
+  458  roslaunch turtlebot3_gazebo turtlebot3_world.launch world_file:=$(pwd)/src/map/training_area.world x_pos:=0 y_pos:=0
+  459  ./src/scripts/test_slam.sh 
+  460  source devel/setup.bash 
+  461  export TURTLEBOT3_MODEL=waffle; 
+  462  roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping 
+  463  source devel/setup.bash 
+  464  export TURTLEBOT3_MODEL=waffle;
+  465  roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch 
+  466  source devel/setup.bash 
+  467  rosrun map_server map_saver -f ~/map
+  468  catkin_create_pkg pick_objects move_base_msgs actionlib roscpp 
+  469  cd pick_objects/src/
+  470  touch pick_objects.cpp
+  471  cd ..
+  472  cd scripts/
+  473  ./pick_objects.sh 
+  474  cd ..
+  475  catkin_make
+  476  source devel/setup.bash 
+  477  rosrun pick_objects 
+  478  rosrun pick_objects pick_objects 
+  479  cd src/scripts/
+  480  ./pick_objects.sh 
+  481  cd ..
+  482  catkin_make
+  483  cd src/scripts/
+  484  ./pick_objects.sh 
+  485  cd ../..
+  486  catkin_make
+  487  source devel/setup.bash 
+  488  cd src/scripts/
+  489  ./pick_objects.sh 
+  490  cd ..
+  491  source devel/setup.bash 
+  492  cd src/scripts/
+  493  ./pick_objects.sh 
+  494  cd ../..
+  495  source devel/setup.bash 
+  496  cd src/scripts/
+  497  ./pick_objects.sh 
+  498  cd ../..
+  499  source devel/setup.bash 
+  500  cd src/scripts/
+  501  ./pick_objects.sh 
+  502  cd ../..
+  503  source devel/setup.bash 
+  504  cd src/scripts/
+  505  ./pick_objects.sh 
+  506  cd ../..
+  507  source devel/setup.bash 
+  508  cd src/scripts/
+  509  ./pick_objects.sh 
+  510  cd ../..
+  511  source devel/setup.bash 
+  512  cd src/scripts/
+  513  ./pick_objects.sh 
+  514  cd ../..
+  515  source devel/setup.bash 
+  516  cd src/scripts/
+  517  ./pick_objects.sh 
+  518  cd ../..
+  519  catkin_make
+  520  source devel/setup.bash 
+  521  cd src/scripts/
+  522  ./pick_objects.sh 
+  523  cd ../..
+  524  catkin_make
+  525  cd src/scripts/
+  526  ./pick_objects.sh 
+  527  cd ../..
+  528  catkin_create_pkg add_markers visualization_msgs roscpp
+  529  touch add_markers.cpp
+  530  catkin_make
+  531  cd src/scripts/
+  532  ./pick_objects.sh 
+  533  ./add_markers.sh 
+  534  cd ../..
+  535  catkin_make
+  536  cd src/scripts/
+  537  cd ../..
+  538  source devel/setup.bash 
+  539  cd src/scripts/
+  540  ./add_markers.sh 
+  541  cd ../..
+  542  catkin_make
+  543  source devel/setup.bash 
+  544  cd src/scripts/
+  545  ./add_markers.sh 
+  546  cd ../..
+  547  catkin_make
+  548  source devel/setup.bash 
+  549  cd src/scripts/
+  550  ./add_markers.sh 
+  551  cd ../..
+  552  catkin_make
+  553  cd src/scripts/
+  554  ./add_markers.sh 
+  555  cd ../..
+  556  catkin_make
+  557  source devel/setup.bash 
+  558  cd src/scripts/
+  559  ./add_markers.sh 
+  560  roslaunch add_markers add_markers.launch 
+  561  $(find add_markers)
+  562  c d..
+  563  cd ..
+  564  c d..
+  565  cd ..
+  566  c d..
+  567  cd ..
+  568  source devel/setup.bash 
+  569  rosrun pick_objects pick_objects 
+  570  rostopic echo /initialpose
+  571  rostopic echo /move_base_simple/goal
+  572  source devel/setup.bash 
+  573  rostopic echo /move_base_simple/goal
+  574  rostopic  list
+  575  rostopic echo /move_base_simple/goal
+  576  rostopic echo /move_base/goal
+  577  rostopic ech echo scan
+  578  rostopic ech echo /scan
+  579  rostopic echo /scan
+  580  rostopic echo /clicked_point
+  581  rosrun pick_objects pick_objects 
+  582  source devel/setup.bash 
+  583  rosrun pick_objects pick_objects 
+  584  source devel/setup.bash 
+  585  rosrun pick_objects pick_objects 
+  586  source devel/setup.bash 
+  587  roslaunch add_markers add_markers.launch 
+  588  catkin_make
+  589  source devel/setup.bash 
+  590  cd src/scripts/
+  591  ./add_markers.sh 
+  592  cd ../..
+  593  catkin_make
+  594  source devel/setup.bash 
+  595  cd src/scripts/
+  596  ./add_markers.sh 
+  597  cd ../..
+  598  catkin_make
+  599  source devel/setup.bash 
+  600  cd src/scripts/
+  601  ./add_markers.sh 
+  602  ./pick_objects.sh 
+  603  ls -l
+  604  cd ../..
+  605  catkin_make
+  606  cd src/scripts/
+  607  ls -l
+  608  chmod x+ home_service.sh 
+  609  chmod +x home_service.sh 
+  610  ls -l
+  611  ./home_service.sh 
+  612  git status
+  613  cd ..
+  614  git status
+  615  cd ..
+  616  c d..
+  617  cd ..
+  618  source devel/setup.bash 
+  619  catkin_make
+  620  source devel/setup.bash 
+  621  catkin_make
+  622  source devel/setup.bash 
+  623  catkin_make
+  624  source devel/setup.bash 
+  625  git status
+  626  git add .catkin_workspace
+  627  git add .gitignore 
+  628  git add launch.sh 
+  629  git readme.txt
+  630  git add readme.txt 
+  631  git add src/
+  632  git status
+  633  git commit -m "initial"
+  634  git push
+  635  cd ..
+  636  code .
+  637  source devel/setup.bash 
+  638  rosrun add_markers add_markers 
+  639  git status
+  640  git init
+  641  git status
+  642  git add .catkin_workspace 
+  643  git ad .gitignore
+  644  git dd .gitignore
+  645  git add .gitignore 
+  646  git status
+  647  git add readme.txt 
+  648  git add src/
+  649  git commit -m "initial"
+  650  git push
+  651  git branch -M main
+  652  git remote add origin https://github.com/YazguurTech/URSERoboNDHomeServiceRobot.git
+  653  ./test_navigation.sh 
+  654  cd ..
+  655  source devel/setup.bash 
+  656  cd src/scripts/
+  657  ./test_navigation.sh 
+  658  ./test_slam.sh 
+  659  cd ..
+  660  ls
+  661  source devel/setup.bash 
+  662  ls
+  663  source devel/setup.bash 
+  664  ls
+  665  cd src/scripts/
+  666  ls
+  667  ./home_service.sh 
+  668  git clone https://github.com/YazguurTech/URSERoboNDGoChaseIt.git
+  669  cd URSERoboNDGoChaseIt/
+  670  ls
+  671  catkin_make
+  672  ls
+  673  cd src/scripts/
+  674  ls
+  675  ./home_service.sh 
+  676  cd ../..
+  677  catkin_make
+  678  ls
+  679  cd src/scripts/
+  680  ls
+  681  ./home_service.sh 
+  682  cd ../..
+  683  source devel/setup.bash 
+  684  cd src/scripts/
+  685  ./home_service.sh 
+  686  roslaunch home_service home_service.launch 
+  687  cd ../..
+  688  roslaunch home_service home_service.launch 
+  689  cakin_make
+  690  catkin_make
+  691  source devel/setup.bash 
+  692  catkin_make
+  693  source devel/setup.bash 
+  694  catkin_make
+  695  cd src/
+  696  catkin_create_pkg home_service
+  697  cd ..
+  698  catkin_make
+  699  source devel/setup.bash 
+  700  roslaunch home_service home_service.launch 
+  701  cd src/scripts/
+  702  ./home_service.sh 
+  703  cd ..
+  704  source devel/setup.bash 
+  705  code .
+  706  rostopic echo /odom
+  707  rostopic /odom
+  708  rostopic list
+  709  rostopic info /odom
+  710  rostopic type /odom
+  711  rossrv nav_msgs/Odometry
+  712  rossrv info nav_msgs/Odometry
+  713  rosmsg info nav_msgs/Odometry
+  714  catkin_create_pkg home_service
+  715  rostopic type /odom
+  716  rostopic info /odom
+  717  rostopic
+  718  rostopic type /odom
+  719  source devel/setup.bash 
+  720  ls
+  721  cd src/scripts/
+  722  ./home_service.sh 
+  723  cd ..
+  724  code .
+  725  cd src/scripts/
+  726  ./home_service.sh 
+  727  cd ..
+  728  catkin_make
+  729  source devel/setup.bash 
+  730  cd src/scripts/
+  731  ./home_service.sh 
+  732  cd ..
+  733  ls
+  734  source devel/setup.bash 
+  735  cd src/scripts/
+  736  ls
+  737  ./home_service.sh 
+  738  cd ..
+  739  source devel/setup.bash 
+  740  cd src/scripts/
+  741  cd ..
+  742  catkin_make
+  743  source devel/setup.bash 
+  744  ls
+  745  cd src/scripts/
+  746  ls
+  747  ./home_service.sh 
+  748  cd ..
+  749  catkin_make
+  750  ls
+  751  source devel/setup.bash 
+  752  cd src/scripts/
+  753  ls
+  754  ./home_service.sh 
+  755  cd ..
+  756  source devel/setup.bash 
+  757  ls
+  758  rostopic info /odom
+  759  rxgraph
+  760  source devel/setup.bash 
+  761  rqt_graph
+  762  catkin_make
+  763  ls
+  764  cd src/scripts/
+  765  ls
+  766  cd ..
+  767  source devel/setup.bash 
+  768  cd src/scripts/
+  769  ./home
+  770  ./home_service.sh 
+  771  cd ..
+  772  ls
+  773  source devel/setup.bash 
+  774  cd src/scripts/
+  775  ls
+  776  cd ..
+  777  catkin_make
+  778  source devel/setup.bash 
+  779  ls
+  780  cd src/scripts/
+  781  ls
+  782  ./home_service.sh 
+  783  rqt_graph
+  784  source devel/setup.bash 
+  785  ls
+  786  cd src/scripts/
+  787  ls
+  788  ./home_service.sh 
+  789  cd ..
+  790  ls
+  791  catkin_make
+  792  ls
+  793  source devel/setup.bash 
+  794  ls
+  795  cd src/scripts/
+  796  ./home_service.sh 
+  797  cd ..
+  798  ls
+  799  catkin_mke
+  800  catkin_make
+  801  source devel/setup.bash 
+  802  ls
+  803  cd src/scripts/
+  804  ls
+  805  ./home_service.sh 
+  806  cd ..
+  807  catkin_make
+  808  ls
+  809  source devel/setup.bash 
+  810  ls
+  811  cd src/scripts/
+  812  ls
+  813  ./home_service.sh 
+  814  cd ..
+  815  catkin_make
+  816  ls
+  817  source devel/setup.bash 
+  818  ls
+  819  cd src/scripts/
+  820  ls
+  821  ./home_service.sh 
+  822  cd ..
+  823  catkin_make
+  824  ls
+  825  source devel/setup.bash 
+  826  ls
+  827  cd src/scripts/
+  828  ls
+  829  ./home_service.sh 
+  830  cd ..
+  831  catkin_make
+  832  source devel/setup.bash 
+  833  ls
+  834  cd src/scripts/
+  835  ls
+  836  ./home_service.sh 
+  837  cd ..
+  838  catkin_make
+  839  source devel/setup.bash 
+  840  ls
+  841  cd src/scripts/
+  842  ./home_service.sh 
+  843  cd ../..
+  844  catkin_make
+  845  source devel/setup.bash 
+  846  cd src/scripts/
+  847  ./home_service.sh 
+  848  rosrun pick_objects pick_objects
+  849  cd ../..
+  850  catkin_make
+  851  source devel/setup.bash 
+  852  cd src/scripts/
+  853  ./home_service.sh 
+  854  cd ../..
+  855  catkin_make
+  856  cd src/scripts/
+  857  cd ../..
+  858  source devel/setup.bash 
+  859  cd src/scripts/
+  860  ./home_service.sh 
+  861  cd ../..
+  862  catkin_make
+  863  source devel/setup.bash 
+  864  cd src/scripts/
+  865  ./home_service.sh 
+  866  cd ../..
+  867  catkin_make
+  868  source devel/setup.bash 
+  869  cd src/scripts/
+  870  ./home_service.sh 
+  871  cd ..
+  872  catkin_make
+  873  source devel/setup.bash 
+  874  cd src/scripts/
+  875  ./home_service.sh 
+  876  cd ..
+  877  catkin_make
+  878  source devel/setup.bash 
+  879  cd src/scripts/
+  880  ./home_service.sh 
+  881  cd ..
+  882  catkin_make
+  883  source devel/setup.bash 
+  884  cd src/scripts/
+  885  ./home_service.sh 
+  886  cd ..
+  887  catkin_make
+  888  source devel/setup.bash 
+  889  cd src/scripts/
+  890  ./home_service.sh 
+  891  cd ..
+  892  catkin_make
+  893  source devel/setup.bash 
+  894  cd src/scripts/
+  895  ./home_service.sh 
+  896  cd ..
+  897  catkin_make
+  898  source devel/setup.bash 
+  899  cd src/scripts/
+  900  ./home_service.sh 
+  901  cd ..
+  902  catkin_make
+  903  source devel/setup.bash 
+  904  cd src/scripts/
+  905  ./home_service.sh 
+  906  rosparam list
+  907  ./home_service.sh 
+  908  cd ..
+  909  git status
+  910  git add readme.txt
+  911  git add src/
+  912  git status
+  913  git add launch.sh
+  914  git status
+  915  git commit -m "added home_service"
+  916  git push
+  917  catkin_make
+  918  source devel/setup.bash 
+  919  cd src/scripts/
+  920  ./home_service.sh 
+  921  ls
+  922  cd ..
+  923  code .
+  924  rostopic echo /cmd_vel
+  925  rostopic pub /cmd_vel geometry_msgs/Twist "linear:
+  926    x: 0.2
+  927    y: 0.0
+  928    z: 0.0
+  929  angular:
+  930    x: 0.0
+  931    y: 0.0
+  932    z: 0.0"
+  933  rostopic echo /cmd_vel
+  934  rostopic pub /cmd_vel geometry_msgs/Twist "linear:
+  935    x: 0.5
+  936    y: 0.0
+  937    z: 0.0
+  938  angular:
+  939    x: 0.0
+  940    y: 0.0
+  941    z: 0.0"
+  942  export TURTLEBOT3_MODEL=waffle;
+  943  roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch 
+  944  rostopic pub /cmd_vel geometry_msgs/Twist "linear:
+  945    x: 0.2  # Set your desired linear velocity
+  946    y: 0.0
+  947    z: 0.0
+  948  angular:
+  949    x: 0.0
+  950    y: 0.0
+  951  rostopic pub /cmd_vel geometry_msgs/Twist "linear:
+  952    x: 0.26
+  953    y: 0.0
+  954    z: 0.0
+  955  angular:
+  956    x: 0.0
+  957    y: 0.0
+  958    z: 0.0"
+  959  rostopic pub /cmd_vel geometry_msgs/Twist "linear:
+  960    x: 0.16
+  961    y: 0.0
+  962    z: 0.0
+  963  angular:
+  964    x: 0.0
+  965    y: 0.0
+  966    z: 0.0"
+  967  rostopic pub /cmd_vel geometry_msgs/Twist "linear:
+  968    x: 0.0
+  969    y: 0.0
+  970    z: 0.0
+  971  angular:
+  972    x: 0.0
+  973    y: 0.0
+  974    z: 0.0"
+  975  rostopic pub /cmd_vel geometry_msgs/Twist "linear:
+  976    x: 0.26
+  977    y: 0.0
+  978    z: 0.0
+  979  angular:
+  980    x: 0.0
+  981    y: 0.0
+  982    z: 0.0"
+  983  rqt
+  984  cd ..
+  985  l
+  986  cd src/
+  987  ls
+  988  cd scripts/
+  989  ls
+  990  cd ..
+  991  ls
+  992  cd src/
+  993  ls
+  994  cd scripts/
+  995  ./home_service.sh 
+  996  cd ..
+  997  ls
+  998  code .
+  999  history > commands.txt

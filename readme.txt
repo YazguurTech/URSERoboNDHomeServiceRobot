@@ -1,161 +1,129 @@
-## Set it up for the project
+## Home service
 
-sudo apt-get install xterm
+The Home Service Robot is the final project of the Robotics Software Engineer nanodegree program on the Udacity.
+The Home Service Robot simulates a home service robot capable of navigating to pick up and deliver virtual objects.
+This readme contains instructions about how to run the project.
 
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
-catkin_init_workspace
-cd ..
-catkin_make
-sudo apt-get update
-cd ~/catkin_ws/src
-git clone https://github.com/ros-perception/slam_gmapping
+### Software requirements:
+ - Ubuntu 20.04
+ - ROS Noetic
+ - Gazebo 11
 
-git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
-git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+### Used ROS packages:
+ - [Turtlebot3](https://github.com/ROBOTIS-GIT/turtlebot3) - TurtleBot is a ROS standard platform robot. There are multiple versions (4 different versions as of December 2023) of the TurtleBot model. 
+   We are using Turtlebot3 for this project. TurtleBot3 is a small, affordable, programmable, ROS-based mobile robot for use in education, research, hobby, and product prototyping.
+ - [Turtlebot3 simulations](https://github.com/ROBOTIS-GIT/turtlebot3_simulations) - TurtleBot3 supports simulation development environment that can be programmed and developed with a virtual robot in the simulation. 
+   There are two development environments to do this, one is using a fake node with 3D visualization tool RViz, and the other is using the 3D robot simulator Gazebo.
 
-cd ~/catkin_ws/
-source devel/setup.bash
+### Other tools:
+ - Xterm - xterm is the standard terminal emulator for the X Window System.
+    ```
+    sudo apt-get install xterm
+    ```
 
-rosdep -i install gmapping
-rosdep -i install turtlebot3_teleop
-rosdep -i install turtlebot3_gazebo
+### Installing dependences:
+    ```
+    rosdep -i install gmapping
+    rosdep -i install turtlebot3_teleop
+    rosdep -i install turtlebot3_gazebo
+    ```
 
-catkin_make
-source devel/setup.bash
+    `If you haven't set up environment, please refer to the "Set up environment" section below.`
 
-export TURTLEBOT3_MODEL=waffle
-roslaunch turtlebot3_gazebo turtlebot3_world.launch
+### Steps to run:
+There are the following 5 script files in the src/scripts directory:
+    - test_slam.sh - It will deploy a waffle turtlebot3 inside a gazebo environment. You can control it with keyboard commands. 
+    It will interface it with a SLAM package, and you can visualize the map in RViz.
+    - test_navigation.sh - It will deploy a waffle turtlebot3 inside a gazebo environment. 
+    Also, it will launch turtlebot3 navigation where you can manually navigate the robot to reach a desired position using the 2D Nav Goal functionality on the RViz.
+    - pick_objects.sh - It will run the pick_objects node which will autonomously send successive goals for the robot to reach.
+    - add_markers.sh - It will run the add_markers node which will publish markers in RViz to imitate a virtual object appearing in its pickup zone,
+    and then in its drop off zone.
+    - home_service.sh - It will run the add_markers and pick_objects node which will simulate a home service robot capable of 
+    navigating to pick up and deliver virtual objects.
 
-roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
-roslaunch turtlebot3_navigation turtlebot3_navigation.launch
-roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+1. Download and extract the Home Service Robot zip file.
+2. Go the URSERoboNDHomeServiceRobot directory.
+    ```
+    $ cd URSERoboNDHomeServiceRobot
+    ```
+3. Build the project
+    ```
+    catkin_make
+    source devel/setup.bash
+    ```
+4. Go a /src/scripts directory on the URSERoboNDHomeServiceRobot folder.
+    ```
+    $ cd URSERoboNDHomeServiceRobot/src/scripts
+    ```
+5. Execute the corresponding script file.
 
-rosrun map_server map_saver -f ~/map
+    Test SLAM
+    ```
+    $ ./test_slam.sh
+    ```
 
+    Test Navigation
+    ```
+    $ ./test_navigation.sh 
+    ```
 
+    Pick objects
+    ```
+    $ ./pick_objects.sh 
+    ```
 
+    Add markers
+    ```
+    $ ./add_markers.sh
+    ```
 
+    Home Service
+    ```
+    $ ./home_service.sh
+    ```
 
+### Setting up the environment
 
-git clone https://github.com/turtlebot/turtlebot_interactions
+#### Install ROS Noetic 
+ ```
+ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+ sudo apt install curl
+ curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+ sudo apt update
+ sudo apt install ros-noetic-desktop-full
+ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+ source ~/.bashrc
+ sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+ sudo apt install python3-rosdep
+ sudo rosdep init
+ rosdep update
+ ```
 
-rosdep -i install turtlebot_rviz_launchers
-rosdep -i install turtlebot_gazebo
+ #### Install gazebo
+ ```
+ curl -sSL http://get.gazebosim.org | sh
+ ```
 
+ #### Install packages
+ ```
+ sudo apt-get install ros-noetic-navigation 
+ sudo apt-get install ros-noetic-map-server 
+ sudo apt-get install ros-noetic-move-base 
+ sudo apt-get install ros-noetic-amcl
+ sudo apt-get install libignition-math4-dev 
+ sudo apt-get install protobuf-compiler
+ sudo apt-get install ros-noetic-rtabmap-ros
+ ```
 
-rosdep update
-rosdep install turtlebot_navigation
-sudo apt-get install ros-noetic-turtlebot-navigation
-
-
-
-
-touch launch.sh
-touch test_slam.sh
-sudo chmod +x launch.sh
-sudo chmod +x test_slam.sh
-
-./launch.sh
-./test_slam.sh
-
-
-https://www.youtube.com/watch?v=KJH48r92c9Q
-
-
-
-
-https://emanual.robotis.com/docs/en/platform/turtlebot3/slam_simulation/
-https://www.turtlebot.com/
-https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/
-https://clearpathrobotics.com/turtlebot-4/
-https://github.com/ROBOTIS-GIT/turtlebot3
-https://github.com/ROBOTIS-GIT/turtlebot3_simulations
-
-
-
-## Set it up for the project
-
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
-catkin_init_workspace
-cd ..
-catkin_make
-sudo apt-get update
-cd ~/catkin_ws/src
-git clone https://github.com/ros-perception/slam_gmapping
-git clone https://github.com/turtlebot/turtlebot
-git clone https://github.com/turtlebot/turtlebot_interactions
-git clone https://github.com/turtlebot/turtlebot_simulator
-cd ~/catkin_ws/
-source devel/setup.bash
-rosdep -i install gmapping
-rosdep -i install turtlebot_teleop
-rosdep -i install turtlebot_rviz_launchers
-rosdep -i install turtlebot_gazebo
-catkin_make
-source devel/setup.bash
-
-
-
-rosdep update
-rosdep install turtlebot_navigation
-sudo apt-get install ros-noetic-turtlebot-navigation
-
-
-sudo apt-get install xterm
-
-touch launch.sh
-touch test_slam.sh
-sudo chmod +x launch.sh
-sudo chmod +x test_slam.sh
-
-./launch.sh
-./test_slam.sh
-
-
-https://www.youtube.com/watch?v=KJH48r92c9Q
-https://knowledge.udacity.com/questions/371403
-https://knowledge.udacity.com/questions/371403
-
-
-$ sudo apt-get install ros-noetic-controller-manager
-
-
-
-Create a pick_objects package:
-cd ~/catkin_ws/src
-catkin_create_pkg pick_objects move_base_msgs actionlib roscpp 
-
-
-Create a pick_objects package:
-cd ~/catkin_ws/src
-catkin_create_pkg add_markers visualization_msgs roscpp 
-
-Create a home_service package:
-cd ~/catkin_ws/src
-catkin_create_pkg home_service 
-
-
-get a location and goal:
-rostopic echo /initialpose
-OR
-rostopic echo /move_base_simple/goal
-
-
-#!/bin/sh
-xterm  -e  " export TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_gazebo turtlebot3_world.launch world_file:=$(pwd)/../../src/map/training_area.world 
-" &
-sleep 5
-xterm  -e  " export TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_slam turtlebot3_gmapping.launch " &
-sleep 5
-xterm  -e  " export TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml " &
-sleep 5
-xterm  -e  " export TURTLEBOT3_MODEL=waffle; roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch " 
-
-
-Problems:
-1. Costmap location was misplaced - Solution: specify: map_file:=$HOME/map.yaml for turtlebot3 navigation
-2. Robot was located in a different place. To fix the issue, update resolution from 0.05 to 0.01 in training_area.yaml file.
-3. Map was rotated different angle. <param name="initial_pose_a" value="-1.57" />
-
+ #### Install Visual Studio Code
+ ```
+ sudo apt-get install wget gpg
+ wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+ sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+ rm -f packages.microsoft.gpg
+ sudo apt install apt-transport-https
+ sudo apt update
+ sudo apt install code
+ ```

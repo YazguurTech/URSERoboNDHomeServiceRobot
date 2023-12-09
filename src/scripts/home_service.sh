@@ -1,5 +1,4 @@
 #!/bin/sh
-
 xterm -e "cd $(pwd)/../..;
 source devel/setup.bash;
 export TURTLEBOT3_MODEL=waffle;
