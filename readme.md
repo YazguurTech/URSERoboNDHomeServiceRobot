@@ -28,14 +28,30 @@ This readme contains instructions about how to run the project.
     ```
     If you haven't set up environment, please refer to the "Setting up the environment" section below.
 
-### Steps to run
-There are the following 5 script files in the src/scripts directory:
+### Packages
+
+- **home_service** It contains the rviz configurations and the launch file.
+- **pick_objects**: This package is responsible for commanding the robot to navigate to the desired pick-up and drop-off locations.
+- **add_markers**: It will run the add_markers and pick_objects node which will simulate a home service robot capable of navigating to pick up and deliver virtual objects.
+
+### Source folder structure
+
+- **home_service** - It contains the rviz configurations and the launch file.
+- **add_markers** - It contains add_markers.cpp, add_markers_testonly.cpp, as well as the RViz and launch files associated with add_markers_testonly. add_markers.cpp is utilized for home service simulation, while add_markers_testonly.cpp is specifically employed for testing marker functionality in isolation.
+- **pick_objects** - It contains pick_objects.cpp and pick_objects_testonly.cpp. pick_objects.cpp is utilized for home service simulation, while pick_objects_testonly.cpp is specifically employed for testing navigation functionality in isolation.
+- **configs** - It includes location_config.xml, where the pickup and drop-off zone locations are configured.
+- **map** - It contains the Gazebo world file, the map file, and their respective configurations.
+- **turtlebot3** - It includes files related to Turtlebot3, encompassing various configurations, launch files, and other associated components.
+- **turtlebot3_simulations** - It contains files related to Turtlebot3 simulations.
+- **scripts**  There are the following 5 script files in the src/scripts directory:
  - **test_slam.sh** - It will deploy a waffle turtlebot3 inside a gazebo environment. You can control it with keyboard commands. 
  It will interface it with a SLAM package, and you can visualize the map in RViz.
  - **test_navigation.sh** - It will deploy a waffle turtlebot3 inside a gazebo environment. Also, it will launch turtlebot3 navigation where you can manually navigate the robot to reach a desired position using the 2D Nav Goal functionality on the RViz.
  - **pick_objects.sh** - It will run the pick_objects node which will autonomously send successive goals for the robot to reach.
  - **add_markers.sh** - It will run the add_markers node which will publish markers in RViz to imitate a virtual object appearing in its pickup zone, and then in its drop off zone.
  - **home_service.sh** - It will run the add_markers and pick_objects node which will simulate a home service robot capable of navigating to pick up and deliver virtual objects.
+
+### Steps to run
 
 1. Download and extract the HomeServiceRobot.zip file.
 2. Go the HomeServiceRobot directory.
