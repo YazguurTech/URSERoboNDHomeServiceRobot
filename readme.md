@@ -65,7 +65,7 @@ This readme contains instructions about how to run the project.
     ```
 4. Go a src/scripts directory on the HomeServiceRobot folder.
     ```
-    cd src/scripts
+    cd src/scripts/
     ```
 5. Execute the corresponding script file.
 
