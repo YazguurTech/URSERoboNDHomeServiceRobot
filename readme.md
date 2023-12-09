@@ -4,24 +4,22 @@ The Home Service Robot is the final project of the Robotics Software Engineer na
 The Home Service Robot simulates a home service robot capable of navigating to pick up and deliver virtual objects.
 This readme contains instructions about how to run the project.
 
-### Software requirements:
+### Software requirements
  - Ubuntu 20.04
  - ROS Noetic
  - Gazebo 11
 
-### Used ROS packages:
- - [Turtlebot3](https://github.com/ROBOTIS-GIT/turtlebot3) - TurtleBot is a ROS standard platform robot. There are multiple versions (4 different versions as of December 2023) of the TurtleBot model. 
-   We are using Turtlebot3 for this project. TurtleBot3 is a small, affordable, programmable, ROS-based mobile robot for use in education, research, hobby, and product prototyping.
- - [Turtlebot3 simulations](https://github.com/ROBOTIS-GIT/turtlebot3_simulations) - TurtleBot3 supports simulation development environment that can be programmed and developed with a virtual robot in the simulation. 
-   There are two development environments to do this, one is using a fake node with 3D visualization tool RViz, and the other is using the 3D robot simulator Gazebo.
+### Used ROS packages
+ - [Turtlebot3](https://github.com/ROBOTIS-GIT/turtlebot3) - TurtleBot is a ROS standard platform robot. There are multiple versions (4 different versions as of December 2023) of the TurtleBot model. We are using Turtlebot3 for this project. TurtleBot3 is a small, affordable, programmable, ROS-based mobile robot for use in education, research, hobby, and product prototyping.
+ - [Turtlebot3 simulations](https://github.com/ROBOTIS-GIT/turtlebot3_simulations) - TurtleBot3 supports simulation development environment that can be programmed and developed with a virtual robot in the simulation. There are two development environments to do this, one is using a fake node with 3D visualization tool RViz, and the other is using the 3D robot simulator Gazebo.
 
-### Other tools:
+### Other tools
  - Xterm - xterm is the standard terminal emulator for the X Window System.
     ```
     sudo apt-get install xterm
     ```
 
-### Installing dependences:
+### Installing dependences
     ```
     rosdep -i install gmapping
     rosdep -i install turtlebot3_teleop
@@ -29,7 +27,7 @@ This readme contains instructions about how to run the project.
     ```
     If you haven't set up environment, please refer to the "Setting up the environment" section below.
 
-### Steps to run:
+### Steps to run
 There are the following 5 script files in the src/scripts directory:
  - **test_slam.sh** - It will deploy a waffle turtlebot3 inside a gazebo environment. You can control it with keyboard commands. 
  It will interface it with a SLAM package, and you can visualize the map in RViz.
@@ -53,27 +51,22 @@ There are the following 5 script files in the src/scripts directory:
     $ cd HomeServiceRobot/src/scripts
     ```
 5. Execute the corresponding script file.
-
     Test SLAM
     ```
     $ ./test_slam.sh
     ```
-
     Test Navigation
     ```
     $ ./test_navigation.sh 
     ```
-
     Pick objects
     ```
     $ ./pick_objects.sh 
     ```
-
     Add markers
     ```
     $ ./add_markers.sh
     ```
-
     Home Service
     ```
     $ ./home_service.sh
