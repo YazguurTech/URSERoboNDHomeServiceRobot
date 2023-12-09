@@ -30,9 +30,9 @@ This readme contains instructions about how to run the project.
 
 ### Packages
 
-- **home_service** It contains the rviz configurations and the launch file.
-- **pick_objects**: This package is responsible for commanding the robot to navigate to the desired pick-up and drop-off locations.
-- **add_markers**: It will run the add_markers and pick_objects node which will simulate a home service robot capable of navigating to pick up and deliver virtual objects.
+- **home_service** - It contains an RViz configuration and a launch file.
+- **pick_objects**: - It is responsible for navigating the robot to the configured pick-up and drop-off locations.
+- **add_markers**: It is responsible for subscribing to odometry to keep track of the robot's position and publishing markers.
 
 ### Source folder structure
 
