@@ -20,6 +20,7 @@ This readme contains instructions about how to run the project.
     ```
 
 ### Installing dependences
+
     ```
     rosdep -i install gmapping
     rosdep -i install turtlebot3_teleop
@@ -51,6 +52,7 @@ There are the following 5 script files in the src/scripts directory:
     $ cd HomeServiceRobot/src/scripts
     ```
 5. Execute the corresponding script file.
+
     Test SLAM
     ```
     $ ./test_slam.sh
