@@ -56,38 +56,38 @@ This readme contains instructions about how to run the project.
 1. Download and extract the HomeServiceRobot.zip file.
 2. Go the HomeServiceRobot directory.
     ```
-    $ cd HomeServiceRobot
+    cd HomeServiceRobot
     ```
 3. Build the project
     ```
     catkin_make
     source devel/setup.bash
     ```
-4. Go a /src/scripts directory on the HomeServiceRobot folder.
+4. Go a src/scripts directory on the HomeServiceRobot folder.
     ```
-    $ cd HomeServiceRobot/src/scripts
+    cd src/scripts
     ```
 5. Execute the corresponding script file.
 
     Test SLAM
     ```
-    $ ./test_slam.sh
+    ./test_slam.sh
     ```
     Test Navigation
     ```
-    $ ./test_navigation.sh 
+    ./test_navigation.sh 
     ```
     Pick objects
     ```
-    $ ./pick_objects.sh 
+    ./pick_objects.sh 
     ```
     Add markers
     ```
-    $ ./add_markers.sh
+    ./add_markers.sh
     ```
     Home Service
     ```
-    $ ./home_service.sh
+    ./home_service.sh
     ```
 
 ### Setting up the environment
