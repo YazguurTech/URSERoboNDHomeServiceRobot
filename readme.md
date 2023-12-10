@@ -28,11 +28,29 @@ This readme contains instructions about how to run the project.
     ```
     If you haven't set up environment, please refer to the "Setting up the environment" section below.
 
-### Packages
+### Packages Used
 
-- **home_service** - It contains an RViz configuration and a launch file.
-- **pick_objects**: - It is responsible for navigating the robot to the configured pick-up and drop-off locations.
-- **add_markers**: It is responsible for subscribing to odometry to keep track of the robot's position and publishing markers.
+In the project, the integration of custom packages — home service, pick objects, and add markers alongside the foundational ROS packages turtlebot3 and turtlebot3 simulations, with a focus on turtlebot3 navigation, forms a  framework for simulating a home service robot. This system is to efficiently navigate within an environment, simulating the seamless pickup and delivery of virtual objects.
+
+#### Custom Packages
+
+- **Home service** - It simplifies simulation setup with an RViz configuration and launch file.
+- **Pick objects**: - It i responsible for precise navigation, pick objects enables the robot to autonomously navigate to pre-configured pick-up and drop-off locations. It leverages the capabilities of the ROS Navigation Stack to plan and execute trajectories.
+- **Add markers**: It subscribes to odometry, keeping track of the robot's position, and publishes markers, enhancing visualization in RViz. It provides real-time feedback on the robot's location and status.
+
+#### Foundational ROS Packages
+
+- **turtlebot3 and turtlebot3 simulations** - It provides simulation environments and tools for TurtleBot3 robots. A custom Gazebo world was utilized in the project.
+- **turtlebot3 acml** - Adaptive Monte Carlo Localization (AMCL) is employed through this package to enable Simultaneous Localization and Mapping (SLAM) capabilities. AMCL allows the robot to create and update a map of its environment while estimating its pose with the help of a particle filter.
+- **turtlebot3 navigation** - It enables navigation capabilities for TurtleBot3 robots, integrating with the AMCL (Adaptive Monte Carlo Localization) algorithm and move base. AMCL is employed for robot localization, while move base facilitates path planning and obstacle avoidance during navigation.
+
+#### Key Localization and Mapping Packages
+
+ - **AMCL (Adaptive Monte Carlo Localization)** - AMCL is a probabilistic localization algorithm that utilizes a particle filter to estimate the robot's pose within an environment. 
+ - **GMapping** - Grid-based Mapping is integral for Simultaneous Localization and Mapping (SLAM). It uses laser scan data to create a 2D occupancy grid map of the environment while concurrently estimating the robot's pose.
+
+ #### Navigation Stack Component
+  - **Move Base** - It is a central component that brings together the navigation stack. It integrates global and local planners, a costmap generator, and controllers, guiding the robot from its current position to a specified goal while avoiding obstacles.
 
 ### Source folder structure
 
